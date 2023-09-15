@@ -1,0 +1,54 @@
+<div class="container mt-5">
+  <h1>Student List</h1>
+
+  <div *ngIf="showAddForm" class="mt-3 student-form">
+
+    <h2>Add Student</h2>
+    <form (submit)="addStudent()">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" class="form-control" id="firstName" [(ngModel)]="newStudent.firstName" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" class="form-control" id="lastName" [(ngModel)]="newStudent.lastName" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" class="form-control" id="email" [(ngModel)]="newStudent.email" [ngModelOptions]="{standalone: true}">
+      </div>
+      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="button" class="btn btn-secondary" (click)="cancelAddStudent()">Cancel</button>
+    </form>
+  </div>
+
+  <table class="table table-striped mt-3 student-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{ student.studentID }}</td>
+        <td>{{ student.firstName }}</td>
+        <td>{{ student.lastName }}</td>
+        <td>{{ student.email }}</td>
+        <td>
+          <button class="btn btn-success" (click)="showAddStudentForm()">Add</button>
+          <button class="btn btn-primary" (click)="onSelect(student)">Edit</button>
+          <button class="btn btn-danger" (click)="onDelete(student.studentID)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table> 
+
+  <div *ngIf="selectedStudent">
+    <h2>Edit Student</h2>
+    <app-student-edit [student]="selectedStudent" (update)="onUpdate($event)" (cancel)="cancelEdit()"></app-student-edit>
+  </div>
+</div>

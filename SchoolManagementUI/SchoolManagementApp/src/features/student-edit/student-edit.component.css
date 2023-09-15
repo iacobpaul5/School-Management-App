@@ -1,0 +1,64 @@
+
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .student-table th,
+  .student-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .student-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .student-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .student-table tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* Student Form */
+  .student-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .student-form label {
+    font-weight: bold;
+  }
+  
+  .student-form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .student-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .student-form button.btn-success:hover {
+    background-color: #45a049;
+  }
+  
+
+  .container {
+    margin-top: 20px;
+  }
+  

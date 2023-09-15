@@ -1,0 +1,32 @@
+<h1>Student Details</h1>
+<table class="student-table">
+    <thead>
+      <tr>
+        <th>Student ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Field of Study</th>
+        <th>Teacher First Name</th>
+        <th>Teacher Last Name</th>
+        <th>Teacher Email</th>
+        <th>Grade Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let row of studentsTableData">
+        <tr>
+          <td>{{ row.studentID }}</td>
+          <td>{{ row.firstName }}</td>
+          <td>{{ row.lastName }}</td>
+          <td>{{ row.email }}</td>
+          <td>{{ row.fieldOfStudy }}</td>
+          <td>{{ row.teacherFirstName }}</td>
+          <td>{{ row.teacherLastName }}</td>
+          <td>{{ row.teacherEmail }}</td>
+          <td>{{ row.gradeValue }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+  

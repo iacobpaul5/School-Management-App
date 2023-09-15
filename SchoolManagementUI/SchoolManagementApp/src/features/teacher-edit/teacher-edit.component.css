@@ -1,0 +1,33 @@
+
+.teacher-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .teacher-form label {
+    font-weight: bold;
+  }
+  
+  .teacher-form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .teacher-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .teacher-form button.btn-success:hover {
+    background-color: #45a049;
+  }
+  

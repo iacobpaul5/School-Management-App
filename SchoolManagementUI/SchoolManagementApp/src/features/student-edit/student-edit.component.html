@@ -1,0 +1,16 @@
+<div *ngIf="student" class="student-form">
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input type="text" class="form-control" id="firstName" [(ngModel)]="student.firstName">
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input type="text" class="form-control" id="lastName" [(ngModel)]="student.lastName">
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="text" class="form-control" id="email" [(ngModel)]="student.email">
+  </div>
+  <button class="btn btn-success" (click)="updateStudent()">Update</button>
+  <button class="btn btn-secondary" (click)="cancelEdit()">Cancel</button>
+</div>

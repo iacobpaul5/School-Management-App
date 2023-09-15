@@ -1,0 +1,33 @@
+<div class="auth-container">
+  <div class="input-row">
+    <div>
+      Name:
+      <input [(ngModel)]="user.username" placeholder="Name">
+    </div>
+    <div>
+      Password:
+      <input [(ngModel)]="user.password" placeholder="Password" type="password">
+    </div>
+    <div class="button-container">
+      <button (click)="register(user)">Register</button>
+      <button (click)="login(user)">Login</button>
+      <button (click)="logout()">Logout</button>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="isLoggedIn">
+  <div>
+    <app-student></app-student>
+  </div>
+  <div>
+    <app-teacher></app-teacher>
+  </div>
+  <app-student-details></app-student-details>
+</div>
+
+
+
+<!-- <button (click)="getme()">Get Me</button> -->
+

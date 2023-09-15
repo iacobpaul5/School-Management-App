@@ -1,0 +1,36 @@
+<table class="table table-striped teacher-table">
+<div class="container mt-5">
+    <h1>Teachers List</h1> 
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let teacher of teachers">
+          <td>{{ teacher.teacherID }}</td>
+          <td>{{ teacher.firstName }}</td>
+          <td>{{ teacher.lastName }}</td>
+          <td>{{ teacher.email }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="onSelect(teacher)">Edit</button>
+            <button class="btn btn-danger" (click)="onDelete(teacher.teacherID)">Delete</button>           
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+  
+    <div *ngIf="selectedTeacher">
+      <h2>Edit Teacher</h2>
+      <app-teacher-edit [teacher]="selectedTeacher" (update)="onUpdate($event)" (cancel)="cancelEdit()"></app-teacher-edit>
+    </div>
+  </div>
+</table>
+
