@@ -13,7 +13,7 @@ Key Features
 
 Usage 
 -Register a new user account, and after you can log in and acces the information
--Use the application to perform CRUD operations on resources
+-Use the application to perform CRUD operations on resources 
 
 
 
